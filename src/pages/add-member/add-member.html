@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <ion-icon ios="ios-person-add" md="md-person-add" padding></ion-icon>
+            Add Member
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>Member name</ion-label>
+            <ion-input type="text" [(ngModel)]="newMember.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <div text-center>
+                <button ion-button color="secondary" (click)="addMember()">Add</button>
+                <button ion-button color="danger" (click)="cancel()">Cancel</button>
+            </div>
+        </ion-item>
+    </ion-list>
+
+
+
+</ion-content>

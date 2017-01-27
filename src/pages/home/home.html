@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      <ion-icon ios="logo-angular" md="logo-angular"></ion-icon>
+      <ion-icon ios="ios-ionic" md="md-ionic"></ion-icon>
+      Vertex
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let member of team" (click)="selectMember(member)" text-center>
+      <ion-avatar item-left>
+        <img src="{{member.picture}}">
+      </ion-avatar>
+      <h3>{{member.name}}</h3>
+    </ion-item>
+  </ion-list>
+
+  <div text-center>
+    <button ion-button color="twitter" (click)="addMember()">
+      <ion-icon ios="ios-person-add" md="md-person-add" padding></ion-icon>
+      Add Member
+    </button>
+
+  </div>
+</ion-content>
